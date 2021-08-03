@@ -580,7 +580,7 @@ app.get("/store/status", (req, res) => {
 app.post("/store/status", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   const newStatus = req.body.status;
-  const status = database.status = newStatus;
+  const status = (database.status = newStatus);
   res.status(200).send({
     status,
   });
@@ -741,5 +741,9 @@ app.post("/language", (req, res) => {
     lng,
   });
 });
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("./build"));
+}
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
