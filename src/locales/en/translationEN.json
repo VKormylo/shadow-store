@@ -1,0 +1,120 @@
+{
+    "nav": {
+        "store": "Store",
+        "library": "Library",
+        "settings": "Settings"
+    },
+    "header": {
+        "main": "Main",
+        "browse": "Browse",
+        "wishlist": "Wishlist"
+    },
+    "store": {
+        "slider": {
+            "outnow": "Out Now"
+        },
+        "freeGames": {
+            "title": "Free Games",
+            "btn": "View more",
+            "soon": "Coming Soon",
+            "freeNow": "Free now",
+            "at": "at"
+        },
+        "mostPopular": {
+            "title": "Most popular"
+        },
+        "newAndTrending": {
+            "title": "New and Trending",
+            "items": {
+                "new": "New Releases",
+                "top": "Top Sellers",
+                "soon": "Coming Soon"
+            }
+        },
+        "popularGame": {
+            "btn": "Play free!"
+        },
+        "catalog": {
+            "title": "Shadow Store Catalog",
+            "browse": "Browse",
+            "text": "Explore our catalog for your next favorite game!",
+            "btn": "Browse all"
+        }
+    },
+    "library": {
+        "sort": {
+            "sort": "Sort",
+            "normal": "Normal",
+            "byalphabet": "By alphabet"
+        },
+        "filter": {
+            "filter": "Filter",
+            "all": "All",
+            "downloaded": "Downloaded"
+        },
+        "libraryGame": {
+            "download": "Download",
+            "start": "Start",
+            "visit": "Visit game page",
+            "remove": "Remove from library",
+            "delete": "Delete"
+        }
+    },
+    "placeholder": "Search",
+    "price": {
+        "free": "Free",
+        "soon": "Coming soon",
+        "currency": "UAH"
+    },
+    "game": {
+        "back": "Back to",
+        "currentPlace": {
+            "store": "store",
+            "library": "library"
+        },
+        "buy": "Buy now",
+        "get": "Get now",
+        "in": "In library",
+        "add": "Add to Wishlist",
+        "remove": "Remove from Wishlist",
+        "developer": "Developer",
+        "publisher": "Publisher",
+        "platform": "Platform"
+    },
+    "settings": {
+        "settings": "Settings",
+        "language": "Language"
+    },
+    "wishlist": {
+        "empty": {
+            "empty": "Your wishlist is empty",
+            "descr" : "Games added to your wishlist will appear here",
+            "back": "Back to store"
+        },
+        "info": "Add games to your wishlist to allow notifications when they become available.",
+        "sort": {
+            "sort": "Sort by",
+            "default": "Default",
+            "byalphabet": "By alphabet",
+            "price": {
+                "lowToHigh": "Price: Low to High",
+                "highToLow": "Price: High to Low"
+            }
+        },
+        "confirm": "will be removed. Are you sure?"
+    },
+    "months": {
+        "january": "Jan",
+        "february": "Feb",
+        "march": "Mar",
+        "april": "Апр.",
+        "may": "May",
+        "june": "Jun",
+        "july": "Jul",
+        "august": "Aug",
+        "september": "Sep",
+        "october": "Oct",
+        "november": "Nov",
+        "december": "Dec"
+    }
+}

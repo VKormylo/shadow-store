@@ -1,0 +1,35 @@
+.topContent {
+  margin-top: 90px;
+}
+
+.descr {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.text {
+  max-width: 500px;
+  color: #b9b9b9;
+}
+
+.temporarilyFreeGames {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.freeGames {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 0 0;
+}
+

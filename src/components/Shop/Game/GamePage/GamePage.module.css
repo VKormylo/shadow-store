@@ -1,0 +1,337 @@
+.block {
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #141414f3;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  line-height: 15px;
+  margin: -50px 0;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+.back {
+  position: relative;
+  margin-right: 34px;
+}
+
+.back span::before {
+  content: "";
+  border: solid #6b6b6b;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin: 0 4px 2px 0;
+  transition: all 0.2s;
+}
+
+.back span::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  display: inline-block;
+  background-color: #6b6b6b;
+  height: 20px;
+  width: 1px;
+  margin-left: 15px;
+}
+
+.back:hover span::before {
+  border-color: #fff;
+  transform: translateX(-5px) rotate(135deg);
+}
+
+.back .link {
+  color: #6b6b6b;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.back:hover .link {
+  color: #fff;
+}
+
+.gamepage {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.content {
+  flex-basis: 75%;
+}
+
+.gameName {
+  margin: 90px 0 20px 0;
+  font-size: 36px;
+}
+
+.sidebar {
+  position: sticky;
+  align-self: flex-start;
+  top: 80px;
+  right: 0;
+  flex-basis: 21%;
+  padding-top: 30px;
+  margin-left: 50px;
+}
+
+.contentFoto img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.sidebarFoto img {
+  /* width: 100%; */
+  padding: 15px;
+  border-radius: 4px;
+  height: 200px;
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.btns a {
+  color: #fff;
+}
+
+.btnBuy,
+.btnAdd {
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btnBuy {
+  padding: 18px 0;
+  background-color: #0084ff;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.btnBuy .btn {
+  padding: 18px 10px;
+}
+
+.btnBuy:hover {
+  background-color: #178fff;
+}
+
+.btnAdd {
+  border: 1px solid #fff;
+  padding: 6px 20px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btnAdd:hover {
+  background-color: #4b4b4b;
+}
+
+.btnAdd .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.btnAdd .btn img {
+  margin-right: 5px;
+}
+
+
+.price.uah {
+  left: -110px;
+}
+
+.btnAdd {
+  position: relative;
+  margin-top: 5px;
+}
+
+.btnAdd:hover .wish {
+  display: block;
+}
+
+.wish {
+  display: none;
+  position: absolute;
+  top: -55px;
+  left: 80px;
+  background-color: #1b1b1b;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: auto;
+  padding: 15px 20px;
+}
+
+.wish.ru {
+  left: 40px;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: #9b9b9b;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+.item span {
+  max-width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.item img {
+  width: 18px;
+}
+
+/* ---------- */
+/* RESPONSIVE */
+/* ---------- */
+
+@media (max-width: 1270px) {
+  .content {
+    flex-basis: 85%;
+
+  }
+  .sidebar {
+    margin-left: 20px;
+  }
+  .sidebarFoto img {
+    height: 160px;
+  }
+  .btnBuy {
+    padding: 14px 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .gamepage {
+    flex-direction: column-reverse;
+  }
+  .sidebar {
+    position: static;
+    padding-top: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+  .sidebarFoto img {
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+  .gameName {
+    font-size: 16px;
+  }
+  .price {
+    margin-top: 10px;
+  }
+  .content {
+    margin-top: 20px;
+  }
+  .wish {
+    top: -55px;
+    left: 30%;
+  }
+}
+
+@media(max-width: 730px) {
+  .name {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 600px) {
+  .back {
+    font-size: 14px;
+  }
+  .gameName {
+    margin: 20px 0 20px 0;
+  }
+  .name {
+    font-size: 14px;
+    max-width: none;
+    overflow: auto;
+    white-space: normal;
+    text-overflow: inherit;
+  }
+  .header {
+    top: 64px;
+    height: 70px;
+    margin: 0;
+  }
+  .text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 470px) {
+  .name {
+    font-size: 14px;
+    max-width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .back span::after {
+    display: none;
+  }
+  .name {
+    display: none;
+  }
+  .text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 330px) {
+  .name {
+    max-width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

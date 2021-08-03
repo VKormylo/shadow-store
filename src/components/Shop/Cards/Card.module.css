@@ -1,0 +1,122 @@
+/* ----- CARD.JSX ----- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 32%;
+  background-color: #2b2b2b;
+  border-radius: 5px;
+  padding-bottom: 30px;
+}
+
+.category {
+  font-size: 22px;
+  padding: 20px 0 10px 20px;
+}
+
+/* ----- CARDITEM.JSX ----- */
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #2b2b2b;
+  padding: 9px 0 5px 20px;
+  width: 100% - 20px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background-color: #3b3b3b;
+}
+
+.contentInner {
+  display: flex;
+  align-items: center;
+}
+
+.foto img {
+  width: 60px;
+  border-radius: 3px;
+}
+
+.content {
+  margin-left: 20px;
+}
+
+.name {
+  max-width: 300px;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.wishlist {
+  display: flex;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  background-color: #272727;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: auto;
+  padding: 12px 20px;
+}
+
+.add {
+  position: absolute;
+  right: 20px;
+  display: none;
+}
+
+.wishlist:hover .hidden {
+  position: absolute;
+  display: flex;
+}
+
+.item:hover .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- */
+/* RESPONSIVE */
+/* ---------- */
+
+@media (max-width: 1700px) {
+  .name {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 1370px) {
+  .name {
+    max-width: 145px;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  .price {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .add {
+    right: 10px;
+  }
+  .name {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .card {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}

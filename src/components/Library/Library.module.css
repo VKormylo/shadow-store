@@ -1,0 +1,551 @@
+/* ----------- */
+/* LIBRARY.JSX */
+/* ----------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 30px 0;
+}
+
+.games {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item .show {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  width: 150px;
+  left: 25%;
+  background-color: #2b2b2b;
+  border-radius: 2px;
+}
+
+.sorting .items {
+  width: 135px;
+  padding: 10px 5px;
+}
+
+.items li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.btnMore .items li:hover {
+  text-decoration: underline;
+}
+
+.sorting {
+  display: flex;
+}
+
+.sorting .item {
+  position: relative;
+  display: flex;
+  color: #b9b9b9;
+}
+.sorting .item + .item {
+  margin-left: 50px;
+}
+
+.sorting .item a {
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.sorting .item a:hover {
+  color: #fff;
+}
+
+.sorting .item .filter::after {
+  content: "";
+  border: solid #b9b9b9;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin: 0 0 4px 5px;
+  transition: all 0.2s;
+}
+
+.sorting .item .clicked::after {
+  margin-bottom: 0px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.sorting .item .filter:hover::after {
+  border-color: #fff;
+}
+
+.items .active {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.right {
+  display: flex;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  background-color: #222;
+  height: 45px;
+  padding: 15px;
+  border-radius: 4px 0 0 4px;
+}
+
+.searchIcon img {
+  width: 15px;
+}
+
+.search input {
+  color: #fff;
+  background-color: #222;
+  border: none;
+  text-decoration: none;
+  width: 210px;
+  height: 45px;
+  border-radius: 0 4px 4px 0;
+  list-style: none;
+  outline: none;
+  padding: 4px 0 4px 0;
+}
+
+.sorting {
+  position: relative;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+}
+
+.view .item {
+  display: flex;
+  margin: 0 25px;
+}
+
+.view .item.card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 15px;
+  cursor: pointer;
+}
+
+.view .item.card div {
+  width: 7px;
+  height: 7px;
+  background-color: #5b5b5b;
+}
+
+.view .item.card div {
+  margin-bottom: 1px;
+}
+
+.view .item.card.active div {
+  background-color: #fff;
+}
+
+.view .item.string {
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 14px;
+  cursor: pointer;
+}
+
+.view .item.string .line {
+  display: flex;
+  justify-content: space-between;
+  width: 17px;
+}
+
+.view .item.string .line .firstBlock {
+  width: 2px;
+  height: 2px;
+  background-color: #5b5b5b;
+}
+
+.view .item.string .line .lastBlock {
+  width: 12px;
+  height: 2px;
+  background-color: #5b5b5b;
+}
+
+.view .item.string.active .line div {
+  background-color: #fff;
+}
+
+/* ----------------------- */
+/* LIBRARYGAME(common).JSX */
+/* ----------------------- */
+
+.name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.info {
+  display: none;
+}
+
+.items {
+  padding: 10px 20px;
+}
+
+.download {
+  margin: 4px 0 0;
+}
+
+.download a {
+  color: #9b9b9b;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.downloaded::before {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #9b9b9b;
+  transform: translateY(-30%);
+  margin-right: 5px;
+  transition: all 0.2s;
+}
+
+.nonDownloaded::before {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #9b9b9b;
+  transform: translateY(-40%) rotate(270deg);
+  margin-right: 5px;
+  transition: all 0.2s;
+}
+
+/* --------------------- */
+/* LIBRARYGAME(card).JSX */
+/* --------------------- */
+
+.gameC {
+  cursor: pointer;
+  margin: 0 20px 40px 0;
+  flex-basis: 18%;
+  width: 18%;
+}
+
+.gameC .photo {
+  display: flex;
+  justify-content: center;
+}
+
+.gameC .photo img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+.gameC .photo img:hover {
+  opacity: 0.9;
+}
+
+.gameC .name {
+  max-width: 270px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.gameC .infoBtns {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gameC .btn {
+  color: #9b9b9b;
+}
+
+.gameC .show {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  right: 0;
+  width: 100%;
+  background-color: #2b2b2b;
+  border-radius: 2px;
+}
+
+/* --------------------- */
+/* LIBRARYGAME(line).JSX */
+/* --------------------- */
+
+.gameL {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #2b2b2b;
+  border-radius: 3px;
+  transition: all 0.2s;
+  margin-bottom: 10px;
+  height: 70px;
+  width: 100%;
+}
+
+.gameL:hover {
+  background-color: #0084ff;
+  cursor: pointer;
+}
+
+.gameL .content,
+.gameL .btnMore {
+  display: flex;
+  align-items: center;
+}
+
+.gameL .photo {
+  margin: 10px 0 10px 10px;
+}
+
+.gameL .photo img {
+  display: block;
+  height: 55px;
+  border-radius: 4px;
+}
+
+.gameL .action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 0 20px;
+}
+
+.gameL:hover .download a {
+  color: #b3c4f5;
+}
+
+.gameL:hover .downloaded::before,
+.gameL:hover .nonDownloaded::before {
+  border-top: 7px solid #b3c4f5;
+}
+
+.gameL .btnMore .btn a {
+  white-space: nowrap;
+  transition: all 0.2s;
+  padding: 26px 30px;
+}
+
+.gameL .btnMore:hover .btn a {
+  border-radius: 4px;
+  background-color: #178fff;
+}
+
+.gameL .showInfo {
+  width: 265px;
+  background-color: #2b2b2b;
+  border-radius: 3px;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: 10;
+}
+
+.icon {
+  display: none;
+  right: 0;
+  background-color: #141414;
+  top: 12px;
+
+  border-radius: 4px 0 0 4px;
+}
+
+.icon img {
+  width: 16px;
+}
+
+.showSearch .searchBlock {
+  display: none;
+}
+
+.showSearch .searchBlock.showed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #141414;
+  border-top: 1px solid #3b3b3b;
+}
+
+.close {
+  margin: 0 20px;
+}
+
+.close img {
+  width: 10px;
+}
+
+/* ---------- */
+/* RESPONSIVE */
+/* ---------- */
+
+@media (max-width: 1370px) {
+  .gameC {
+    flex-basis: 22.5%;
+  }
+  .filteredGames.game {
+    flex-basis: 24%;
+  }
+}
+
+@media (max-width: 1170px) {
+  .gameC {
+    flex-basis: 30.5%;
+  }
+}
+
+@media (max-width: 1130px) {
+  .searchIcon {
+    height: 35px;
+    padding: 12px;
+  }
+  .searchIcon img {
+    width: 12px;
+  }
+  .search input {
+    width: 170px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .gameC {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 970px) {
+  .gameL .action .name {
+    font-size: 16px;
+  }
+  .sorting .item + .item {
+    margin-left: 25px;
+  }
+  .icon {
+    display: block;
+  }
+  .search {
+    display: none;
+    width: 100%;
+  }
+  .showSearch .search {
+    display: flex;
+  }
+  .search input {
+    width: 100%;
+    height: 35px;
+    background-color: #141414;
+  }
+  .searchIcon {
+    background-color: #141414;
+  }
+}
+
+@media (max-width: 770px) {
+  .games {
+    justify-content: space-between;
+  }
+  .gameC {
+    flex-basis: 40%;
+  }
+}
+
+@media (max-width: 730px) {
+  .gameC .name {
+    font-size: 16px;
+  }
+  .gameL {
+    height: 60px;
+  }
+  .download a {
+    font-size: 14px;
+  }
+  .sorting {
+    flex-direction: column;
+    align-items: start;
+  }
+  .sorting .item + .item {
+    margin: 5px 0 0 0;
+  }
+  /* LIBRARYGAME */
+  .gameL .photo img {
+    height: 40px;
+  }
+  .gameL .action .name {
+    font-size: 14px;
+  }
+  .gameL .btnMore .btn a {
+    transition: all 0.2s;
+    padding: 22px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin-top: 10px;
+  }
+  .showSearch .searchBlock.showed {
+    top: 125px;
+  }
+  .btnMore .items {
+    padding: 10px 10px;
+  }
+  .btnMore .items a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 370px) {
+  .sorting .item {
+    font-size: 14px;
+  }
+  .view .item {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 340px) {
+  .gameL .action .name {
+    font-size: 14px;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}

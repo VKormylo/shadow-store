@@ -1,0 +1,46 @@
+.preloaderBg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader {
+  margin: 300px 0 0 0;
+  background: url(../../assets/images/logo-round.png)
+    no-repeat center;
+  width: 100px;
+  height: 100px;
+}
+
+.preloader2 {
+  box-sizing: content-box;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #0084FF;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin 1s ease-in-out infinite;
+  position: relative;
+  margin: 300px 0 0 0;
+  top: -400px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- */
+/* RESPONSIVE */
+/* ---------- */
+
+@media(max-width: 400px) {
+  .preloader {
+    margin-top: 200px;
+  }
+}

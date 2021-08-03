@@ -1,0 +1,96 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn a{
+  color: #ffff;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn:hover a{
+  background-color: #4b4b4b;
+}
+
+.games {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  flex-basis: 100%;
+}
+
+.game + .game {
+    margin-left: 20px;
+}
+
+.price {
+  font-size: 18px;
+}
+
+.dev {
+  color: #9b9b9b;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.photo {
+  display: flex;
+}
+
+.photoV img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+.photoH img {
+  border-radius: 6px;
+  width: 100%;
+}
+
+.photo img:hover {
+  opacity: 0.9;
+}
+
+.name,
+.dev {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ---------- */
+/* RESPONSIVE */
+/* ---------- */
+
+@media (max-width: 860px) {
+  .wishlistGames {
+    display: none;
+  }
+}

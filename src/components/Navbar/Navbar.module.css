@@ -1,0 +1,167 @@
+/* ------ */
+/* HEADER */
+/* ------ */
+
+.header {
+  padding: 0 40px 20px 40px;
+}
+
+.logoText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoText a {
+  padding: 0 0 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ------ */
+/* NAVBAR */
+/* ------ */
+
+.nav {
+  position: fixed;
+  left: 0;
+  padding: 20px;
+  margin-top: 20px;
+  height: 100vh;
+  border-right: 1px solid #333333;
+  line-height: 15px;
+}
+
+.items {
+  margin: 20px 0 0 30px;
+}
+
+.item {
+  padding: 5px 0 20px 15px;
+}
+
+.item:last-child {
+  position: absolute;
+  bottom: 50px;
+}
+
+.item a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  transition: all 0.3s;
+  color: #b9b9b9;
+  text-decoration: none;
+}
+
+.item a.activeLink {
+  color: #fff;
+}
+
+.item a.activeLink {
+  color: #fff;
+}
+
+.item:hover a {
+  color: #fff;
+}
+
+.icon {
+  filter: invert(97%) sepia(0%) saturate(29%) hue-rotate(136deg) brightness(84%)
+    contrast(0%);
+  width: 20px;
+  margin-right: 20px;
+  transition: all 0.3s;
+}
+
+.item a.activeLink .icon {
+  filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(297deg)
+    brightness(100%) contrast(104%);
+}
+
+.item:hover .icon {
+  filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(297deg)
+    brightness(100%) contrast(104%);
+}
+
+/* ---------- */
+/* RESPONSIVE */
+/* ---------- */
+
+@media (max-width: 1700px) {
+  .header {
+    padding: 0 20px 20px 15px;
+  }
+  .header img {
+    width: 60px;
+  }
+  .logoText a {
+    font-size: 18px;
+  }
+  .items {
+    margin: 20px 0 0 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    padding: 0 0px 20px 10px;
+  }
+  .header img {
+    width: 50px;
+  }
+  .logoText a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0;
+  }
+  .header img {
+    width: 40px;
+  }
+  .logoText a {
+    display: none;
+  }
+  .nav {
+    position: sticky;
+    display: flex;
+    top: 0;
+    z-index: 10;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 20px;
+    height: auto;
+    background-color: #1b1b1b;
+    border-right: none;
+  }
+  .items {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+  .item:last-child {
+    position: static;
+  }
+  .item {
+    padding: 0 20px 0 0;
+  }
+  .item a {
+    font-size: 14px;
+  }
+  .item img {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .item {
+    padding: 0 10px 0 0;
+  }
+  .item a {
+    font-size: 12px;
+  }
+}
