@@ -10,6 +10,8 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static(path.join(__dirname, "client/build")));
+
 // --------
 // DATABASE
 // --------
@@ -781,8 +783,6 @@ app.post("/language", (req, res) => {
     lng,
   });
 });
-
-app.use(express.static(path.join(__dirname, "client/build")));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client/build")));
