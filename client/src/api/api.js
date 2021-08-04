@@ -2,12 +2,13 @@ import * as axios from "axios";
 
 const instance = axios.create({
   withCredentials: false,
-  dataType: "jsonp"
+  dataType: "jsonp",
+  baseURL: "https://shadow-store.herokuapp.com",
 });
 
 export const shopAPI = {
   getStore() {
-    return axios.get("/games").then((response) => {
+    return instance.get("/games").then((response) => {
       return response.data;
     });
   },
