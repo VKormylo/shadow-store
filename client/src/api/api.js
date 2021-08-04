@@ -1,9 +1,8 @@
 import * as axios from "axios";
 
 const instance = axios.create({
-  withCredentials: false,
   dataType: "jsonp",
-  baseURL: "",
+
 });
 
 export const shopAPI = {
