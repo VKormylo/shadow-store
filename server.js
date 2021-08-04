@@ -9,8 +9,6 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, "client/build")));
-
 const PORT = process.env.PORT || 8060;
 // --------
 // DATABASE
@@ -560,7 +558,7 @@ const rewriteGames = (updatedGames) => {
 app.get("/games", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   let games = database.games;
   let isWishlistEmpty = database.isWishlistEmpty;
@@ -578,7 +576,7 @@ app.get("/games", (req, res) => {
 app.get("/store/status", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   let status = database.status;
   res.status(200).send({
@@ -589,7 +587,7 @@ app.get("/store/status", (req, res) => {
 app.post("/store/status", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const newStatus = req.body.status;
   const status = (database.status = newStatus);
@@ -605,7 +603,7 @@ app.post("/store/status", (req, res) => {
 app.post("/game/addtolibrary", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
@@ -625,7 +623,7 @@ app.post("/game/addtolibrary", (req, res) => {
 app.post("/game/removefromlibrary", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
@@ -644,7 +642,7 @@ app.post("/game/removefromlibrary", (req, res) => {
 app.post("/game/download", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
@@ -663,7 +661,7 @@ app.post("/game/download", (req, res) => {
 app.post("/game/delete", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
@@ -682,7 +680,7 @@ app.post("/game/delete", (req, res) => {
 app.get("/library/view", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   let view = database.view;
   console.log(view);
@@ -694,7 +692,7 @@ app.get("/library/view", (req, res) => {
 app.put("/library/view", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const view = req.body.text;
   database.view = view;
@@ -711,7 +709,7 @@ app.put("/library/view", (req, res) => {
 app.post("/game/addtowishlist", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
@@ -732,7 +730,7 @@ app.post("/game/addtowishlist", (req, res) => {
 app.post("/game/removefromwishlist", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const { gameId } = req.body;
   console.log(gameId);
@@ -762,7 +760,7 @@ app.post("/game/removefromwishlist", (req, res) => {
 app.get("/language", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   let lng = database.language;
   console.log(lng);
@@ -774,7 +772,7 @@ app.get("/language", (req, res) => {
 app.post("/language", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://shadow-store.herokuapp.com"
+    "*"
   );
   const { language } = req.body;
   let lng = (database.language = language);
@@ -785,6 +783,7 @@ app.post("/language", (req, res) => {
 });
 
 if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "client/build")));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
