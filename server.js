@@ -555,7 +555,7 @@ const rewriteGames = (updatedGames) => {
 // GET ALL GAMES
 // -------------
 
-app.get("/store", (req, res) => {
+app.get("/games", (req, res) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
     "*"
