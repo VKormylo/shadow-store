@@ -3,7 +3,7 @@ import * as axios from "axios";
 const instance = axios.create({
   withCredentials: false,
   dataType: "jsonp",
-  baseURL: "http://localhost:8060",
+  baseURL: "https://shadow-store.herokuapp.com",
 });
 
 export const shopAPI = {
