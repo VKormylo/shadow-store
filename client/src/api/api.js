@@ -2,8 +2,7 @@ import * as axios from "axios";
 
 const instance = axios.create({
   withCredentials: false,
-  dataType: "jsonp",
-  baseURL: "http://localhost:8060",
+  dataType: "jsonp"
 });
 
 export const shopAPI = {
