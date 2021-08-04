@@ -7,7 +7,7 @@ const instance = axios.create({
 
 export const shopAPI = {
   getStore() {
-    return instance.get("/games").then((response) => {
+    return instance.get("/store").then((response) => {
       return response.data;
     });
   },
