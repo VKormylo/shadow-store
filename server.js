@@ -555,7 +555,10 @@ const rewriteGames = (updatedGames) => {
 // -------------
 
 app.get("/games", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   let games = database.games;
   let isWishlistEmpty = database.isWishlistEmpty;
   res.status(200).send({
@@ -570,7 +573,10 @@ app.get("/games", (req, res) => {
 // ------------------
 
 app.get("/store/status", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   let status = database.status;
   res.status(200).send({
     status,
@@ -578,7 +584,10 @@ app.get("/store/status", (req, res) => {
 });
 
 app.post("/store/status", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const newStatus = req.body.status;
   const status = (database.status = newStatus);
   res.status(200).send({
@@ -591,7 +600,10 @@ app.post("/store/status", (req, res) => {
 // -----------------
 
 app.post("/game/addtolibrary", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
     if (game["id"] == gameId) {
@@ -608,7 +620,10 @@ app.post("/game/addtolibrary", (req, res) => {
 });
 
 app.post("/game/removefromlibrary", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
     if (game["id"] == gameId) {
@@ -624,7 +639,10 @@ app.post("/game/removefromlibrary", (req, res) => {
 });
 
 app.post("/game/download", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
     if (game["id"] == gameId) {
@@ -640,7 +658,10 @@ app.post("/game/download", (req, res) => {
 });
 
 app.post("/game/delete", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
     if (game["id"] == gameId) {
@@ -656,7 +677,10 @@ app.post("/game/delete", (req, res) => {
 });
 
 app.get("/library/view", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   let view = database.view;
   console.log(view);
   res.status(200).send({
@@ -665,7 +689,10 @@ app.get("/library/view", (req, res) => {
 });
 
 app.put("/library/view", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const view = req.body.text;
   database.view = view;
   console.log(view);
@@ -679,7 +706,10 @@ app.put("/library/view", (req, res) => {
 // ------------------
 
 app.post("/game/addtowishlist", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const { gameId } = req.body;
   let updatedGames = database.games.map((game) => {
     if (game["id"] == gameId) {
@@ -697,7 +727,10 @@ app.post("/game/addtowishlist", (req, res) => {
 });
 
 app.post("/game/removefromwishlist", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const { gameId } = req.body;
   console.log(gameId);
   let updatedGames = database.games.map((game) => {
@@ -724,7 +757,10 @@ app.post("/game/removefromwishlist", (req, res) => {
 // ------------------
 
 app.get("/language", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   let lng = database.language;
   console.log(lng);
   res.status(200).send({
@@ -733,7 +769,10 @@ app.get("/language", (req, res) => {
 });
 
 app.post("/language", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "https://shadow-store.herokuapp.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://shadow-store.herokuapp.com"
+  );
   const { language } = req.body;
   let lng = (database.language = language);
   console.log(lng);
@@ -742,8 +781,16 @@ app.post("/language", (req, res) => {
   });
 });
 
+app.use(express.static(path.join(__dirname, "client/build")));
+
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"))
+  app.use(express.static(path.join(__dirname, "client/build")));
+  app.get("*", (req, res) => {
+    res.sendfile(path.join((__dirname = "client/build/index.html")));
+  });
 }
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/public/index.html"));
+});
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
