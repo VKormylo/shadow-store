@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f5984b3e.chunk.css",
+    "main.js": "/static/js/main.7098da31.chunk.js",
+    "main.js.map": "/static/js/main.7098da31.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.03d021e0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.03d021e0.js.map",
+    "static/js/2.bd698d58.chunk.js": "/static/js/2.bd698d58.chunk.js",
+    "static/js/2.bd698d58.chunk.js.map": "/static/js/2.bd698d58.chunk.js.map",
+    "static/js/3.12f3f92c.chunk.js": "/static/js/3.12f3f92c.chunk.js",
+    "static/js/3.12f3f92c.chunk.js.map": "/static/js/3.12f3f92c.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.f5984b3e.chunk.css.map": "/static/css/main.f5984b3e.chunk.css.map",
+    "static/js/2.bd698d58.chunk.js.LICENSE.txt": "/static/js/2.bd698d58.chunk.js.LICENSE.txt",
+    "static/media/addToWishlist-black.4b75d9b6.svg": "/static/media/addToWishlist-black.4b75d9b6.svg",
+    "static/media/addToWishlist-icon.8c5d7849.svg": "/static/media/addToWishlist-icon.8c5d7849.svg",
+    "static/media/black-shop-tag.07f77984.svg": "/static/media/black-shop-tag.07f77984.svg",
+    "static/media/close.350d0f2a.svg": "/static/media/close.350d0f2a.svg",
+    "static/media/games-img.96bfdc8f.png": "/static/media/games-img.96bfdc8f.png",
+    "static/media/giftbox.246bc508.svg": "/static/media/giftbox.246bc508.svg",
+    "static/media/icon success.2054cb6f.svg": "/static/media/icon success.2054cb6f.svg",
+    "static/media/icon-cross.f769b859.svg": "/static/media/icon-cross.f769b859.svg",
+    "static/media/loupe.5de5da06.svg": "/static/media/loupe.5de5da06.svg",
+    "static/media/plus-icon.bdf79d08.svg": "/static/media/plus-icon.bdf79d08.svg",
+    "static/media/popular-poe-small.9a4384ca.jpg": "/static/media/popular-poe-small.9a4384ca.jpg",
+    "static/media/popular-poe.f5754342.png": "/static/media/popular-poe.f5754342.png",
+    "static/media/removeFromWishlist-black.f16e3943.svg": "/static/media/removeFromWishlist-black.f16e3943.svg",
+    "static/media/removeFromWishlist-icon.a090fbfb.svg": "/static/media/removeFromWishlist-icon.a090fbfb.svg",
+    "static/media/settings.a2ff87ba.svg": "/static/media/settings.a2ff87ba.svg",
+    "static/media/success-icon.4b6333a7.svg": "/static/media/success-icon.4b6333a7.svg",
+    "static/media/window-of-four-rounded-squares.91055d46.svg": "/static/media/window-of-four-rounded-squares.91055d46.svg",
+    "static/media/windows-logo.b76ff743.svg": "/static/media/windows-logo.b76ff743.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.03d021e0.js",
+    "static/js/2.bd698d58.chunk.js",
+    "static/css/main.f5984b3e.chunk.css",
+    "static/js/main.7098da31.chunk.js"
+  ]
+}
